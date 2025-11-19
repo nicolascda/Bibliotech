@@ -1,0 +1,108 @@
+.MainSection {
+    display: grid;
+    width: 100%;
+    height: 400px;
+    background-image: url('/img/FundoAzul.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: repeat(5, 20%);
+}
+
+.MainImg {
+    display: grid;
+    height: 400px;
+    grid-column-start: 7;
+    grid-row-start: 1;
+}
+
+.MainGroupFirst {
+    /* display: grid; */
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    color: white;
+}
+
+.MainTitleText {
+    font-size: 30px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.MainText {
+    font-size: 15px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+/* --------------------------------- Second Main ---------------------------------------- */
+
+.MainSecondSection {
+    width: 100%;
+    height: 300px;
+}
+
+.Main_S_Text {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: cyan;
+}
+
+.Main_S_Block_Icon {
+    position: relative;
+    display: block;
+    width: 35px;
+    height: 30px;
+    border: solid #2FD6CB;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: white;
+    margin-right: -20px;
+
+}
+
+.Main_S_Block_Icon_Lista_Div {
+    width: 29px;
+    height: 29px;
+    background-image: url("/img/CheckList.png");
+    background-size: cover;
+    display: block;
+
+}
+
+.Main_S_Block_Icon_Coracao_Div {
+    width: 35px;
+    height: 30.5px;
+    background-image: url("/img/Coracao.png");
+    background-size: cover;
+    display: block;
+}
+
+.Main_S_Block_Icon_Livro_Div {
+    width: 24px;
+    height: 30px;
+    position: relative;
+    margin-left: 5px;
+    background-image: url("/img/Livro.png");
+    background-size: 100%;
+    display: block;
+
+}
+
+.Main_S_Block {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.Main_S_Text_Block {
+    font-size: 28px;
+    margin: 0;
+    text-decoration: none;
+    background-color: #E9F0EF;
+    width: 550px;
+}
+
+
