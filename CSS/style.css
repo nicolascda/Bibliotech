@@ -1,6 +1,7 @@
 @import url("./login.css");
 @import url("./main.css");
-@import url("./header.css");s
+@import url("./header.css");
+@import url("./carousel.css");
 
 html, body, header {
     margin: 0;

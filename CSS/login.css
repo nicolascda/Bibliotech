@@ -12,8 +12,8 @@
     --font:'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
 }
 
-/* *{ box-sizing:border-box; }
-html,body{ height:100%; margin:0; font-family:var(--font); background:var(--muted); color:var(--dark); } */
+*{ box-sizing:border-box; }
+.htmlL,.bodyL{ height:100%; margin:0; font-family:var(--font); background:var(--muted); color:var(--dark); }
 
 .page{
     display:flex;
@@ -93,7 +93,7 @@ h2{ margin:0 0 6px; font-size:26px; }
     background:var(--dark);
     color:white;
     width:100%;
-}
+} 
 
 .btn.google{
     background:white;
@@ -144,4 +144,14 @@ h2{ margin:0 0 6px; font-size:26px; }
     .login-card{ order:1; padding:20px; }
     .left-visual{ order:2; padding:40px 20px; }
     .card-inner{ width:100%; }
+}
+
+#submitBtn:hover{
+    background-color: #94c6e7;
+    color: white;
+    border: none;
+    font-size: 15px;
+    border-radius: var(--radius-btn);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

@@ -1,0 +1,40 @@
+/* external css: flickity.css */
+
+
+
+
+.carousel-cell {
+    width: 24%;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-right: 32px;
+    background: yellow;
+    border-radius: 5px;
+}
+
+
+.CarouselImg {
+    width: 150px;
+    height: auto;
+}
+
+.HgroupCarousel {
+    margin-bottom: -10px;
+}
+
+.CarouselTitle {
+    margin-top: 10px;
+    margin-bottom: -25px;
+    padding: 0;
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+.CarouselText {
+    font-family: var(--font);
+}
+
+

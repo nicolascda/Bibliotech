@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./img/Logo.png">
         <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <title>Bibliotech</title>
     </head>
 
@@ -17,7 +18,7 @@
             <div class="HeaderTextDiv">
                 <a href="#" class="HeaderText"> Quem somos</a>
                 <a href="#" class="HeaderText"> Nosso Acervo</a>
-                <a href="#" class="HeaderText">Login</a>
+                <a class="HeaderText" href="login.html">Login</a>
 
                 <input type="text" class="HeaderInput" placeholder="Pesquisar"></input>
             </div>
@@ -84,10 +85,71 @@
 
                 </div>
                 
-                
+            </section>
+
+            <br>
+
+            <section>
+                <div class="carousel"
+                data-flickity='{ "wrapAround": true , "initialIndex": 2}'>
+                    <div class="carousel-cell">
+                        <div class="CarouselDiv">
+                            <img class="CarouselImg" src="/img/FnafIntoThePit.jpg">
+
+                            <hgroup class="HgroupCarousel">
+                                <h2 class="CarouselTitle"> Five Nights at Freddy's Into the Pit</h2>
+                                <h4 class="CarouselText"> Scott Cawthon</h4>
+                            </hgroup>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="CarouselDiv">
+                            <img class="CarouselImg" src="/img/GuerraDosTronos.jpg">
+
+                            <hgroup class="HgroupCarousel">
+                                <h2 class="CarouselTitle"> Guerra dos Tronos</h2>
+                                <h4 class="CarouselText"> George R. R. Martin</h4>
+                            </hgroup>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="CarouselDiv">
+                            <img class="CarouselImg" src="/img/SenhorDosAneis.jpg">
+
+                            <hgroup class="HgroupCarousel">
+                                <h2 class="CarouselTitle"> Senhor dos Anéis</h2>
+                                <h4 class="CarouselText"> J.R.R Tolkien</h4>
+                            </hgroup>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="CarouselDiv">
+                            <img class="CarouselImg" src="/img/OAlquimista.jpg">
+
+                            <hgroup class="HgroupCarousel">
+                                <h2 class="CarouselTitle"> O Alquimista</h2>
+                                <h4 class="CarouselText"> Paulo Coelho</h4>
+                            </hgroup>
+                        </div>
+                    </div>
+                    <div class="carousel-cell">
+                        <div class="CarouselDiv">
+                            <img class="CarouselImg" src="/img/OGuiaDoMochileiroDasGalaxias.jpg">
+
+                            <hgroup class="HgroupCarousel">
+                                <h2 class="CarouselTitle"> O Guia do Mochileiro das Galáxias</h2>
+                                <h4 class="CarouselText"> Douglas Adam</h4>
+                            </hgroup>
+                        </div>
+                    </div>
+
+                </div>
+               
                 
             </section>
-            
         </main>
+
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <!-- <script src="/js/carousel.js"></script> -->
     </body>
 </html>
