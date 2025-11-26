@@ -25,7 +25,19 @@ a, h1, h2 {
     grid-column-start: 2;
 }
 
-.MainButton:active {
+.ThirdMainButton {
+    display: grid;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    width: 150px;
+    height: 20px;
+}
+
+
+.MainButton:active, .ThirdMainButton:active {
     background-color: #3e4b55;
     
 }
