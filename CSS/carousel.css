@@ -1,11 +1,7 @@
 /* external css: flickity.css */
 
-
-
-
 .carousel-cell {
     width: 24%;
-    height: 300px;
     display: flex;
     align-items: center;
     text-align: center;
@@ -15,9 +11,26 @@
     border-radius: 5px;
 }
 
+.carousel-cell:hover .CarouselImg {
+    width: 100%;
+    /* height: 350px; */
+    background: blue;
+    animation-name: CarouselAnimacao;
+
+}
+
+@keyframes CarouselAnimacao
+{
+    from { height: 300}
+}
 
 .CarouselImg {
     width: 150px;
+    height: auto;
+}
+
+.CarouselImg:hover {
+    width: 250px;
     height: auto;
 }
 
