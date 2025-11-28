@@ -1,0 +1,116 @@
+:root{
+    --dark:#26333D;
+    --blue:#4A67DF;
+    --aqua:#2FD6CB;
+    --muted:#E9F0EF;
+    --white:#FFFFFF;
+
+    --radius-btn:10px;
+    --radius-elem:30px;
+
+    --font:'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+/* === Container principal === */
+.container-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Título (caso queira usar depois) */
+.container-form h2 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+/* === Labels === */
+.container-form label {
+    font-weight: 600;
+    color: #334155;
+    margin-top: 12px;
+    display: block;
+}
+
+/* === Inputs padrão === */
+.container-form input[type="text"],
+.container-form input[type="number"],
+.container-form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 15px;
+    transition: .2s;
+    background: #f8fafc;
+}
+
+.container-form input:focus {
+    border-color: #64748b;
+    box-shadow: 0 0 0 2px rgba(100,116,139,0.2);
+    outline: none;
+}
+
+/* === Radios === */
+.container-radio {
+    display: flex;
+    gap: 25px;
+    margin: 15px 0;
+}
+
+.container-radio div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+/* === Botão de enviar === */
+.botao-cadastrar {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botao-cadastrar:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #1e40af, #0284c7);
+}
+
+/* === Responsividade === */
+@media (max-width: 500px) {
+    .container-form {
+        padding: 20px;
+    }
+
+    .container-radio {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.h1{
+    font-family: var(--font);
+}
+
+.tituloc {
+    display: flex;
+    justify-content: center;
+        
+}

@@ -1,0 +1,74 @@
+.Footer {
+    display: grid;
+    width: 100%;
+    height: 250px;
+    background-color: var(--CorFooter);
+    margin-top: 20px;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(10, 10%);
+}
+
+.FooterImg {
+    width: 64px;
+    height: auto;
+}
+
+.FooterTitle 
+{
+    margin-left: 10px;
+    color: white;
+}
+
+.FooterDivTitle
+{
+    display: flex;
+    align-items: center;
+    grid-row-start: 3;
+    grid-column-start: 3;
+    /* grid-column: 2/3; */
+}
+
+.SenaiFooter {
+    grid-row-start: 8;
+    grid-column-start: 2;
+}
+
+.HgroupTitle {
+    color: var(--HgroupTitle);
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+    font-size: 18px;
+}
+
+.HgroupText {
+    color: white;
+    font-size: 10px;
+    font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
+}
+
+.HgroupBiblioteca {
+    display: block;
+    margin: 0;
+    padding: 0;
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row: 3;
+}
+
+.HgroupQuemSomos {
+    display: block;
+    margin: 0;
+    padding: 0;
+    grid-column-start: 16;
+    grid-column-end: 19;
+    grid-row: 3;
+}
+
+.DivAcesseNossasRedes {
+    grid-column-start: 12;
+    grid-column-end: 15;
+    grid-row: 7;
+}
+
+.FooterIcon {
+    margin-right: 30px;
+}

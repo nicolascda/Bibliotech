@@ -7,31 +7,22 @@
     text-align: center;
     justify-content: center;
     margin-right: 32px;
-    background: yellow;
+    /* background: yellow; */
     border-radius: 5px;
-}
-
-.carousel-cell:hover .CarouselImg {
-    width: 100%;
-    /* height: 350px; */
-    background: blue;
-    animation-name: CarouselAnimacao;
-
-}
-
-@keyframes CarouselAnimacao
-{
-    from { height: 300}
-}
-
-.CarouselImg {
-    width: 150px;
-    height: auto;
+    height: 350px;
 }
 
 .CarouselImg:hover {
-    width: 250px;
-    height: auto;
+    height: 250px;
+    width: 200px;
+}
+
+
+
+.CarouselImg {
+    width: 150px;
+    height: 200px;
+    transition: 1s;
 }
 
 .HgroupCarousel {

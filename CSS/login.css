@@ -12,8 +12,15 @@
     --font:'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
 }
 
+.logoL{
+    width:110px;
+    height:auto;
+    margin-bottom:20px;
+}
+
 *{ box-sizing:border-box; }
-.htmlL,.bodyL{ height:100%; margin:0; font-family:var(--font); background:var(--muted); color:var(--dark); }
+.htmlL,.bodyL{ height:100%; margin:0; font-family:var(--font); background:var(--muted); color:var(--dark);}
+
 
 .page{
     display:flex;
@@ -23,7 +30,7 @@
 
 .left-visual{
     flex:1.1;
-    background:#94c6e7; 
+    background:#94c6e7;
     display:flex;
     align-items:center;
     justify-content:center;
@@ -154,4 +161,36 @@ h2{ margin:0 0 6px; font-size:26px; }
     border-radius: var(--radius-btn);
     cursor: pointer;
     transition: background-color 0.3s ease;
+}
+
+.data-nascimento {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--font);
+    margin-bottom: 14px;
+}
+
+.campos-data {
+    display: flex;
+    gap: 12px;
+}
+
+.campos-data select {
+    background: var(--dark);
+    color: #cfcfcf;
+    border: 1px solid #444;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 120px;
+    cursor: pointer;
+}
+
+
+.login-card{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll; /* scroll funciona aqui */
+    padding-right: 20px;
 }

@@ -20,6 +20,21 @@ header {
     text-decoration: none;
     font-weight: 500;
     margin-top: 2px;
+    transition: 3s;
+}
+
+.HeaderText::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 300ms;
+}
+
+.HeaderText:hover:after {
+    width: 100%;
+    
 }
 
 .HeaderImg {

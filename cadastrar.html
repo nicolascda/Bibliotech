@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" href="./img/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotech - Administração</title>
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="./CSS/cadastrar.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2 class="logo">Bibliotech</h2>
+
+    <a href="admin.html" >Dashboard</a>
+    <a class="active" href="#">Cadastrar</a>
+    <a href="#">Empréstimos</a>
+    <a href="#">Usuários</a>
+
+    <a class="logout" href="./index.html">Sair</a>
+</div>
+
+<div class="content">
+    <header>
+        <h1 class="tituloc">Cadastrar</h1>
+    </header>
+    <section class="tabelaArea">
+            <section class="container-form">
+            <form action="#">
+
+                <label for="nome">Nome do autor</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome do autor" required>
+                <div class="container-radio">
+                </div>
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao"  placeholder="Digite uma descrição" required>
+
+                <label for="genero">Gênero</label>
+                <input type="text" id="genero" name="genero"  placeholder="Digite uma descrição" required>
+
+                <label for="imagem">Envie uma imagem do Livro</label>
+                <input type="file" name="imagem" accept="image/*" id="imagem"   placeholder="Envie um imagem" required>
+
+                <input type="submit" name="cadastro" class="botao-cadastrar" value="Cadastrar Livro"/>
+            </form>
+        </section>  
+    </section>
+</div>
+
+<script src="./JS/admin.js"></script>
+</body>
+</html>

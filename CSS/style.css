@@ -2,6 +2,7 @@
 @import url("./main.css");
 @import url("./header.css");
 @import url("./carousel.css");
+@import url("./footer.css");
 
 html, body, header {
     margin: 0;
@@ -12,6 +13,7 @@ a, h1, h2 {
     font-family:'Courier New', Courier, monospace;
     margin: 0;
 }
+
 
 .MainButton {
     display: grid;
@@ -41,4 +43,9 @@ a, h1, h2 {
 .MainButton:active, .ThirdMainButton:active {
     background-color: #3e4b55;
     
+}
+
+:root {
+    --CorFooter: #26333D;
+    --HgroupTitle: #2FD6CB;
 }
