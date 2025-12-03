@@ -9,17 +9,26 @@
 /* HEADER */
 .header {
     width: 100%;
-    padding: 15px 40px;
-    display: flex;
+    height: 50px;
+    /* padding: 15px 40px; */
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: #2a3f4e;
     box-shadow: 0 2px 5px #00000020;
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    grid-template-rows: repeat(3, 33%);
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 16px;
     font-weight: bold;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    color: white;
 }
 
 .menu a {
@@ -27,6 +36,9 @@
     text-decoration: none;
     color: #222;
     font-weight: 500;
+    font-family: 'Montserrat';
+    font-weight: bolder;
+    font-size: 18px;
 }
 
 .menu a.active {
@@ -58,6 +70,7 @@
     padding: 60px;
     text-align: center;
     background: url('https://i.ibb.co/rZdDw6m/bg-books.jpg') center/cover no-repeat;
+    background-color: #0080ff;
     color: white;
     backdrop-filter: blur(3px);
 }
@@ -144,4 +157,86 @@
     border-radius: 50px;
     color: white;
 
+}
+
+.LogadoDiv {
+    display: flex;
+    align-items: center;
+    background-color: #004B87;
+    border-radius: 15px;
+    padding: 5px;
+    position:relative;
+    left: 250px;
+}
+
+.LogadoDiv:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+    filter: brightness(110%);
+}
+
+.LogadoDiv:Active {
+    filter: brightness(100%);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    grid-row: 2/3;
+    grid-column: 8/20;
+}
+
+.User {
+    color: white;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.UserIcon {
+    display: grid;
+    color: white;
+    margin-left: 4px;
+}
+
+.LinkLogado {
+    color: white;
+    transform: translateY(15px);
+}
+.LinkLogado:visited {
+    color: white;
+}
+
+.LinkLogado.active::after {
+  content: '';
+  width: 0px;
+  height: 25px;
+  transform: translateY(-23px);
+  display: block;
+  /* background: #004B87; */
+  background:aliceblue;
+  transition: 500ms;
+}
+
+.LinkLogado::after {
+  content: '';
+  width: 0px;
+  height: 25px;
+  transform: translateY(-22px);
+  display: block;
+  /* background: #004B87; */
+  background: tomato;
+  transition: 500ms;
+}
+
+.LinkLogado:hover:after {
+    width: 100%;
+    border-radius: 5px;
+    z-index: -1;
+    position: relative;
+}
+
+.LogoImg {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
 }

@@ -6,30 +6,30 @@
     <title>Nosso Acervo</title>
     <link rel="stylesheet" href="./CSS/logado.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=supervised_user_circle" />
 </head>
 <body>
 
-    <!-- HEADER -->
     <header class="header">
-        <div class="logo">Biblioteca Virtual</div>
+        <div class="logo">
+            <img class="LogoImg" src="/img/Logo.png">
+            <h2>Bibliotech</h2>
+        </div>
 
         <nav class="menu">
-            <a href="#">Home</a>
-            <a href="#">Quem somos</a>
-            <a href="#">Produtos</a>
-            <a href="#">Recursos</a>
-            <a href="#" class="active">Nosso acervo</a>
-            <a href="#">Blog</a>
-            <a href="#">Contato</a>
+            <a href="#" class="LinkLogado">Livros Reservados</a>
+            <a href="#" class="LinkLogado active">Nosso acervo</a>
+            <a href="#" class="LinkLogado">Contato</a>
+
+            <div class="LogadoDiv">
+                <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
+                <h2 class="User"> Usuário</h2>
+            </div>
+            
         </nav>
 
-        <div class="actions">
-            <button class="btn-outline">Eu quero</button>
-            <button class="btn">Entrar</button>
-        </div>
     </header>
 
-    <!-- BANNER -->
     <section class="banner">
         <h1>Nosso Acervo.</h1>
         <p>Títulos relevantes e autores renomados. Inserção de novas obras todo mês.</p>
@@ -40,18 +40,16 @@
         </div>
     </section>
 
-    <!-- FILTROS -->
     <section class="filtros">
         <select>
-            <option>Categoria</option>
+            <option>Gênero</option>
+            <option>Romance</option>
+            <option>Fantasia</option>
+            <option>Ficção</option>
+            <option>Mistério</option>
+            <option>Drama</option>
+            <option>Comédia</option>   
         </select>
-        <select>
-            <option>Subcategoria</option>
-        </select>
-        <select>
-            <option>Editora</option>
-        </select>
-
         <div class="ordenar">
             <label>Ordenar por:</label>
             <select>
@@ -63,15 +61,40 @@
     </section>
 
     <!-- GRID DE LIVROS -->
-    <section class="grid">
+    <section class="grid" id="MultipleDivs">
+
         <!-- Copie quantos cards você quiser -->
-        <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div>
-        <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div>
-        <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div>
-        <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div>
+        <!-- <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div> -->
 
-    
+        <div class="card" id="myOriginalElement">
+            <img src="./img/OGuiaDoMochileiroDasGalaxias.jpg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
+            </svg>
+        </div>
 
+       
+        
+
+        <script>
+
+            const container = document.getElementById('MultipleDivs');
+
+            const numberOfElements = 5;
+
+            for (let i = 1; i <= numberOfElements; i++) {
+                const newElement = document.createElement('div');
+                const newImg = document.createElement('img');
+                newElement.className = "card";
+
+                newImg.src = "./img/OGuiaDoMochileiroDasGalaxias.jpg";
+                
+                newElement.appendChild(newImg);
+                container.appendChild(newElement);
+            }
+
+        </script>
+
+        
     </section>
 
 </body>
