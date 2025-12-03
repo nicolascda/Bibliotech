@@ -8,7 +8,7 @@ $options = [
 ];
 
 try {
-  $pdo = new PDO($dsn, "root", "1234", $options);
+  $pdo = new PDO($dsn, "cafeteria", "1234", $options);
 } 
 catch (Exception $e) {
   error_log($e->getMessage());

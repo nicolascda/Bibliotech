@@ -67,11 +67,11 @@
         <!-- Copie quantos cards você quiser -->
         <!-- <div class="card"><img src="./img/OGuiaDoMochileiroDasGalaxias.jpg"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/></svg></div> -->
 
-        <div class="card" id="myOriginalElement">
+        <!-- <div class="card" id="MultipleDivs">
             <img src="./img/OGuiaDoMochileiroDasGalaxias.jpg">
             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
             </svg>
-        </div>
+        </div> -->
 
        
         
@@ -85,18 +85,32 @@
             for (let i = 1; i <= numberOfElements; i++) {
                 const newElement = document.createElement('div');
                 const newImg = document.createElement('img');
-                newElement.className = "card";
+                const newSvg = document.createElementNS('http://www.w3.org/2000/svg',"path");
 
-                newImg.src = "./img/OGuiaDoMochileiroDasGalaxias.jpg";
+                newSvg.setAttributeNS(null, "d", "M 1,97.857143 C 19.285714,96.428571 24.016862,131.64801 90.714286,132.85714 140.78762,133.7649 202.79376,66.16041 202.79376,66.16041");
                 
+                newSvg.className = "tag";
+                newElement.className = "card";
+                newImg.src = "./img/OGuiaDoMochileiroDasGalaxias.jpg";
+
                 newElement.appendChild(newImg);
+                container.appendChild(newSvg);
                 container.appendChild(newElement);
             }
 
+            
+
         </script> -->
 
+    <!-- <div class="card" id="MultipleDivs">
+            <img src="./img/OGuiaDoMochileiroDasGalaxias.jpg">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
+            </svg>
+        </div> -->
         
     </section>
 
+    <script src="./nicolas.js"></script>
+    <script src="./BD/LivrosBD.js"></script>
 </body>
 </html>
