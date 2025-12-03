@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Bibliotech</title>
+
+    <link rel="stylesheet" href="./CSS/logado.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/contato.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img class="LogoImg" src="/img/Logo.png">
+            <h2>Bibliotech</h2>
+        </div>
+
+        <nav class="menu">
+            <a href="LivrosReservados.html" class="LinkLogado">Livros Reservados</a>
+            <a href="/logado.html" class="LinkLogado">Nosso acervo</a>
+            <a href="#" class="LinkLogado active">Contato</a>
+
+            <div class="LogadoDiv">
+                <span class="material-symbols-outlined UserIcon">supervised_user_circle</span>
+                <h2 class="User">Usuário</h2>
+            </div>
+        </nav>
+    </header>
+
+    <!-- TÍTULO -->
+    <h2 class="ContatoTitle">Contato <span class="ContatoSpanTitle">.</span></h2>
+
+    <!-- FORMULÁRIO -->
+    <form class="form-container">
+
+        <div class="linha">
+            <div class="campo">
+                <label>Nome*</label>
+                <input type="text" placeholder="Digite aqui">
+            </div>
+
+            <div class="campo">
+                <label>Sobrenome*</label>
+                <input type="text" placeholder="Digite aqui">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Qual é o motivo do contato?*</label>
+                <select>
+                    <option>Digite aqui</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>E-mail institucional*</label>
+                <input type="email" placeholder="Digite aqui">
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Nome da instituição*</label>
+                <input type="text" placeholder="Digite aqui">
+            </div>
+
+            <div class="campo">
+                <label>Celular*</label>
+                <div class="celular-box">
+                    <select>
+                        <option>BR</option>
+                    </select>
+                    <input type="text" value="+55">
+                </div>
+            </div>
+        </div>
+
+        <div class="linha">
+            <div class="campo">
+                <label>Cargo*</label>
+                <select>
+                    <option>Digite aqui</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Estado*</label>
+                <input type="text" placeholder="Digite aqui">
+            </div>
+        </div>
+
+        <div class="campo comentario">
+            <label>Comentários</label>
+            <textarea placeholder="Informações para nos ajudar a entender sua necessidade." rows="4"></textarea>
+        </div>
+
+        <input type="button" value="Enviar" class="butaoC">
+
+    </form>
+
+    <!-- FORMAS DE CONTATO -->
+    <div class="FormasDeContato">
+
+        <h2 class="OutrasFormasDeContato">Dentro das formas de contato, estão:</h2>
+
+        <div class="DivContato">
+            <span class="material-symbols-outlined IconContato">attach_email</span>
+            <h2 class="IconText">universidades.atendimento@pearson.com</h2>
+        </div>
+
+        <div class="DivContato">
+            <span class="material-symbols-outlined IconContato">perm_phone_msg</span>
+            <h2 class="IconText">(11) 93965-6537</h2>
+        </div>
+
+    </div>
+
+        <footer class="Footer ContatoFooter">
+            <div class="FooterDivTitle">
+                <img class="FooterImg" src="./img/Logo.png">
+                <h2 class="FooterTitle">Bibliotech</h2>
+            </div>
+
+            <img class="SenaiFooter" src="./img/SENAI.png">
+
+            <hgroup class="HgroupBiblioteca">
+                <h2 class="HgroupTitle FooterContatoText"> Biblioteca</h2>
+                <h3 class="HgroupText"> Baixar Aplicativo</h3>
+                <h3 class="HgroupText"> Suporte ao usuário</h3>
+            </hgroup>
+
+            <hgroup class="HgroupQuemSomos">
+                <h2 class="HgroupTitle FooterContatoText"> Quem somos</h2>
+                <h3 class="HgroupText"> Clientes</h3>
+                <h3 class="HgroupText"> Benefícios</h3>
+            </hgroup>
+
+            <div class="DivAcesseNossasRedes">
+                <h2 class="HgroupTitle FooterContatoText">Acesse nossas redes</h2>
+                <img class="FooterIcon" src="./img/Facebook.png">
+                <img class="FooterIcon" src="./img/Linkedin.png">
+                <img class="FooterIcon" src="./img/Instagram.png">
+            </div>
+
+        </footer>
+
+</body>
+</html>

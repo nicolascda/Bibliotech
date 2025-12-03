@@ -33,6 +33,8 @@ $stmt->execute([$name, $senha,]);
 
 $contacts = $pdo->query( "SELECT * FROM usuarios ")->fetchAll(PDO::FETCH_CLASS, 'Contact');
 
+
+
 var_dump($contacts);
 // echo $contacts[0]->nome;
 ?>

@@ -69,8 +69,7 @@
 .banner {
     padding: 60px;
     text-align: center;
-    background: url('https://i.ibb.co/rZdDw6m/bg-books.jpg') center/cover no-repeat;
-    background-color: #0080ff;
+    background-color: #26A9E2;
     color: white;
     backdrop-filter: blur(3px);
 }
@@ -198,7 +197,7 @@
     margin-left: 4px;
 }
 
-.LinkLogado {
+.LinkLogado:link {
     color: white;
     transform: translateY(15px);
 }
@@ -239,4 +238,14 @@
     width: 40px;
     height: auto;
     margin-right: 10px;
+}
+
+.Livrosreser{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    color: gray;
+    font-family: "montserrat";
+    text-decoration: underline;
 }

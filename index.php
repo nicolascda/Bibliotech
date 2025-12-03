@@ -17,7 +17,7 @@
             
             <div class="HeaderTextDiv">
                 <a href="#" class="HeaderText"> Quem somos</a>
-                <a href="#" class="HeaderText"> Nosso Acervo</a>
+                <a href="NossoAcervo.html" class="HeaderText"> Nosso Acervo</a>
                 <a class="HeaderText" href="login.html">Login</a>
 
                 <input type="text" class="HeaderInput" placeholder="Pesquisar"></input>

@@ -62,10 +62,10 @@ $oi = $contacts[0]->senha;
                 <input type="text" id="descricao" name="descricao"  placeholder="Digite uma descrição" required>
 
                 <label for="genero">Gênero</label>
-                <input type="text" id="genero" name="genero"  placeholder="Digite uma descrição" required>
+                <input type="text" id="genero" name="genero"  placeholder="Digite o gênero do livro" required>
 
                 <label for="imagem">Envie uma imagem do Livro</label>
-                <input type="file" name="imagem" accept="image/*" id="imagem"   placeholder="Envie um imagem" required>
+                <input type="file" name="imagem" accept="image/*" id="imagem"   placeholder="Envie uma imagem" required>
 
                 <input type="submit" name="cadastro" class="botao-cadastrar" value="Cadastrar Livro"/>
             </form>
