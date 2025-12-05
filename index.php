@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="./img/Logo.png">
         <link rel="stylesheet" href="./CSS/style.css">
+        <link rel="stylesheet" href="./CSS/footer.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
         <title>Bibliotech</title>
     </head>
@@ -13,7 +15,7 @@
         <header>
 
             <img class="HeaderImg" src="./img/Logo.png">
-            <h2 class="Title">Bibliotech</h2>
+            <h2 class="Logo">Bibliotech</h2>
             
             <div class="HeaderTextDiv">
                 <a href="#" class="HeaderText"> Quem somos</a>
@@ -43,31 +45,22 @@
             <section class="MainSecondSection"> 
                 <h1 class="Main_S_Text"> Porque usar o Bibliotech?</h1>
 
-                <div class="Main_S_Block">
-                    <div class="Main_S_Block_Icon">
-                        <div class="Main_S_Block_Icon_Lista_Div"></div>
-                    </div>
-                    
-                    <p class="Main_S_Text_Block">Vizualize se seus livros estão disponiveis</p>
-                </div>
+                <div class="CardsContainer">
 
+        <div class="Card">
+            <div class="CardIcon Lista"></div>
+            <p class="CardText">Vizualize se seus livros estão disponíveis</p>
+        </div>
 
-                <div class="Main_S_Block">
-                    <div class="Main_S_Block_Icon">
-                        <div class="Main_S_Block_Icon_Coracao_Div"></div>
-                    </div>
-                    
-                    <p class="Main_S_Text_Block">Favorite seus livros</p>
-                </div>
+        <div class="Card">
+            <div class="CardIcon Coracao"></div>
+            <p class="CardText">Favorite seus livros</p>
+        </div>
 
-
-                <div class="Main_S_Block">
-                    <div class="Main_S_Block_Icon">
-                        <div class="Main_S_Block_Icon_Livro_Div"></div>
-                    </div>
-                    
-                    <p class="Main_S_Text_Block">Vizualize se seus livros estão disponiveis</p>
-                </div>
+        <div class="Card">
+            <div class="CardIcon Livro"></div>
+            <p class="CardText">Vizualize se seus livros estão disponíveis</p>
+        </div>
 
             </section>
             

@@ -1,3 +1,5 @@
+@import url("./login.css");
+
 /* RESET */
 * {
     margin: 0;
@@ -24,7 +26,7 @@
 .logo {
     font-size: 16px;
     font-weight: bold;
-    grid-column: 2/4;
+    grid-column: 1/4;
     grid-row: 2/3;
     display: flex;
     align-items: center;
@@ -36,7 +38,7 @@
     text-decoration: none;
     color: #222;
     font-weight: 500;
-    font-family: 'Montserrat';
+    font-family: var(--font);
     font-weight: bolder;
     font-size: 18px;
 }
@@ -143,8 +145,9 @@
 }
 
 .card img {
-    width: 100%;
-    border-radius: 8px;
+    width: 200px; 
+    height: 300px; 
+    border-radius: 8px; 
 }
 
 .tag {
@@ -248,4 +251,6 @@
     color: gray;
     font-family: "montserrat";
     text-decoration: underline;
+    height: 300px;
+    justify-content: center;
 }

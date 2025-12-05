@@ -1,11 +1,15 @@
+// const express = require('express');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 // require('dotenv').config();
 
 // Import route files
-const clientRoutes = require('./livros');
+const LivroRota = require('./livros');
 
+const texto = [
+    {nome: "oi"}
+];
 // Create Express app
 const app = express();
 
@@ -15,15 +19,26 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/clients', clientRoutes);
+app.use('/API/LIVRO', LivroRota);
 
 // Health check endpoint
 app.get('/', (req, res) => {
-    res.json({ 
-        message: 'Client-Order Management API is running!',
-        timestamp: new Date().toISOString()
-    });
+    res.json(texto);
 });
+
+app.post('/', (req, res) => {
+    const { nome } = req.body;
+    
+    novoTexto = [
+        nome
+    ];
+
+    texto.push(novoTexto);
+
+    res.status(201).json({
+        msg: "Usuário cadastrado com sucesso"
+    });
+})
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -42,13 +57,15 @@ app.use('/{*any}', (req, res) => {
     });
 });
 
+
 // Start server
 const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`🚀 Server is running on http://localhost:${PORT}`);
     console.log(`📊 API Documentation available at http://localhost:${PORT}`);
-    console.log(`👥 Clients API: http://localhost:${PORT}/api/clients`);
-    console.log(`📦 Orders API: http://localhost:${PORT}/api/orders`);
+    console.log(`👥 Clients API: http://localhost:${PORT}/API/LIVRO`);
+    console.log(`http://localhost:${PORT}/teste/`);
+    
 });
 
 module.exports = app;

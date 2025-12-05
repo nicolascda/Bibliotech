@@ -1,16 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const pool = require('../JS/db');
-
+var app = express();
 // GET all clients
+
+
+
 router.get('/', async (req, res) => {
 
     try {
-        const clients = await pool.query('SELECT * FROM nomes');
+        const clients = await pool.query('SELECT * FROM livros');
         
         // console.log("Hello World");
-        res.json('Sucesso');
-        // res.json(clients);
+        // res.json('Sucesso');
+        res.json(clients);
+
+        
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+router.get('/:genero', async (req, res) => {
+
+    try {
+        const clients = await pool.query('SELECT * FROM livros WHERE genero LIKE ? ORDER BY titulo DESC');//TODO
+        
+        // console.log("Hello World");
+        // res.json('Sucesso');
+        res.json(clients);
 
         
     } catch (error) {
@@ -59,12 +77,12 @@ router.post('/', async (req, res) => {
 
 // PUT update client
 router.put('/:id', async (req, res) => {
-    const { name, email, address } = req.body;
+    const { name } = req.body;
     
     try {
         const result = await pool.query(
-            'UPDATE clients SET name = ?, email = ?, address = ? WHERE client_id = ?',
-            [name, email, address, req.params.id]
+            'UPDATE teste.nomes SET name = ? WHERE id = ?',
+            [name, req.params.id]
         );
         
         if (result.affectedRows === 0) {
@@ -92,6 +110,7 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
+// app.listen(8080);
 
 module.exports = router;
 

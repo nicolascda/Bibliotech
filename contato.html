@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
 </head>
 
+
 <body>
 
     <header class="header">
         <div class="logo">
             <img class="LogoImg" src="/img/Logo.png">
-            <h2>Bibliotech</h2>
+            <h2 onclick="window.location.href='index.php'" style="cursor:pointer;">Bibliotech</h2>
         </div>
 
         <nav class="menu">
@@ -54,22 +55,16 @@
         <div class="linha">
             <div class="campo">
                 <label>Qual é o motivo do contato?*</label>
-                <select>
-                    <option>Digite aqui</option>
-                </select>
+                <input type="text" placeholder="Digite aqui">
             </div>
 
             <div class="campo">
-                <label>E-mail institucional*</label>
+                <label>E-mail*</label>
                 <input type="email" placeholder="Digite aqui">
             </div>
         </div>
 
         <div class="linha">
-            <div class="campo">
-                <label>Nome da instituição*</label>
-                <input type="text" placeholder="Digite aqui">
-            </div>
 
             <div class="campo">
                 <label>Celular*</label>
@@ -80,28 +75,22 @@
                     <input type="text" value="+55">
                 </div>
             </div>
-        </div>
-
-        <div class="linha">
-            <div class="campo">
-                <label>Cargo*</label>
-                <select>
-                    <option>Digite aqui</option>
-                </select>
-            </div>
-
             <div class="campo">
                 <label>Estado*</label>
                 <input type="text" placeholder="Digite aqui">
             </div>
         </div>
 
+        <div class="linha">
+
+        </div>
+
         <div class="campo comentario">
             <label>Comentários</label>
             <textarea placeholder="Informações para nos ajudar a entender sua necessidade." rows="4"></textarea>
         </div>
-
-        <input type="button" value="Enviar" class="butaoC">
+    </br>
+        <input type="button" value="Enviar" class="butaoC" onclick="PointerEvent">
 
     </form>
 
@@ -151,5 +140,27 @@
 
         </footer>
 
+        <!-- MINI PERFIL / MODAL -->
+    <!-- MINI PERFIL / MODAL -->
+<div id="perfilModal" class="perfil-modal hidden">
+    <div class="perfil-content">
+
+        <span id="fecharPerfil" class="close">&times;</span>
+
+        <div class="foto-container">
+            <img id="fotoPerfil" class="foto-perfil" src="./img/user-default.png">
+            <input type="file" id="inputFoto" accept="image/*" style="display:none;">
+        </div>
+
+        <h2 id="perfilNome" class="perfil-nome" contenteditable="true">Clique para editar nome</h2>
+        <p id="perfilEmail" class="perfil-email">email@exemplo.com</p>
+
+        <button id="btnSalvarNome" class="perfil-btn save">Salvar nome</button>
+        <button id="btnSair" class="perfil-btn logout">Sair</button>
+
+    </div>
+</div>
+
+    <script src="js/contato.js"></script>
 </body>
 </html>
