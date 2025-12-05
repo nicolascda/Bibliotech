@@ -31,13 +31,15 @@ async function MostrarPromiseObject()
         // P.innerHTML += `<br> <img src="${nome}">`;
 
         
-        lugar.innerHTML += `<a href="contato.html/${id}">
-            <div class="card" id="MultipleDivs">
-                <img src="${img}" data-genero="${genero}">
-                <svg xmlns="http://www.w3.org/2000/svg"height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
-                </svg>
+        lugar.innerHTML += `
+            <div class="card" id="MultipleDivs" data-genero="${genero}">
+                <a href="contato.html/${id}">
+                    <img src="${img}" >
+                    <svg xmlns="http://www.w3.org/2000/svg"height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
+                    </svg>
+                </a>
             </div>
-            </a>
+            
             
             `
     }
@@ -51,3 +53,42 @@ async function MostrarPromiseObject()
 
 MostrarPromiseObject();
 
+
+// var ValorOpcao = Opcoes.value;
+// var Texto = Opcoes.options[Opcoes.selectedIndex].text;
+
+function MostrarGenero()
+{
+    const Opcoes = document.getElementById('OpcoesSelecionar').value;
+    console.log(Opcoes);
+
+    const LivrosEscolhido = document.querySelectorAll(`[data-genero = ${Opcoes}]`);
+    const Livros = document.querySelectorAll(`[data-genero]`);
+    // console.log(Livros[1].getAttribute(`data-genero`));
+
+    // Livros[0].style.display = 'none';
+    
+    for(let i = 0; i < Livros.length; i++)
+    {
+        if ( Opcoes == 'Gênero')
+        {
+            Livros[i].style.display = 'flex';
+        }
+        else 
+        {
+            if ( Livros[i].getAttribute(`data-genero`) != LivrosEscolhido[0].getAttribute(`data-genero`))
+            {
+                Livros[i].style.display = 'none';
+            }
+            else
+            {
+                Livros[i].style.display = 'flex';
+            }
+        }
+
+        
+    }
+
+    // console.log(LivrosEscolhido[0].getAttribute(`data-genero`));
+
+}
