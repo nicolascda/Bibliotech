@@ -1,61 +1,63 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('loginForm');
-    const email = document.getElementById('email');
-    const password = document.getElementById('password');
-    const emailError = document.getElementById('emailError');
-    const passError = document.getElementById('passError');
-    const toast = document.getElementById('toast');
+const form = document.getElementById("loginForm");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const emailError = document.getElementById("emailError");
+const passError = document.getElementById("passError");
 
-    function showToast(msg) {
-        toast.textContent = msg;
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 3000);
+function showToast(msg) {
+    const t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    setTimeout(() => t.classList.remove("show"), 2000);
+}
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    emailError.textContent = '';
+    passError.textContent = '';
+
+    const emailVal = email.value.trim();
+    const passVal = password.value;
+
+    let ok = true;
+
+    if (!emailVal || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailVal)) {
+        emailError.textContent = 'Informe um email válido';
+        ok = false;
     }
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        emailError.textContent = '';
-        passError.textContent = '';
+    if (!passVal || passVal.length < 6) {
+        passError.textContent = 'Senha deve ter ao menos 6 caracteres';
+        ok = false;
+    }
 
-        const emailVal = email.value.trim();
-        const passVal = password.value;
+    if (!ok) return;
 
-        let ok = true;
-
-        if (!emailVal || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(emailVal)) {
-            emailError.textContent = 'Informe um email válido';
-            ok = false;
-        }
-
-        if (!passVal || passVal.length < 6) {
-            passError.textContent = 'Senha deve ter ao menos 6 caracteres';
-            ok = false;
-        }
-
-        if (!ok) return;
-
-        // Simula login correto
-        sessionStorage.setItem('biblio_user', JSON.stringify({
+    const resposta = await fetch("login.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
             email: emailVal,
-            loggedAt: Date.now()
-        }));
-
-        showToast('Logado com sucesso! Redirecionando...');
-
-        // Aguarda toast aparecer antes de ir para página
-        setTimeout(() => {
-            window.location.href = 'logado.html';
-        }, 900);
+            senha: passVal
+        })
     });
 
-    document.getElementById('googleBtn').addEventListener('click', () => {
-        showToast('Simulando login com Google...');
-        setTimeout(() => {
-            sessionStorage.setItem('biblio_user', JSON.stringify({
-                email: 'google.user@exemplo.com',
-                loggedAt: Date.now()
-            }));
-            window.location.href = 'google.html';
-        }, 900);
-    });
+    const data = await resposta.json();
+
+    if (data.status === "error") {
+        showToast(data.msg);
+        return;
+    }
+
+    sessionStorage.setItem('biblio_user', JSON.stringify({
+        email: data.user.email,
+        id: data.user.id,
+        loggedAt: Date.now()
+    }));
+
+    showToast('Logado com sucesso! Redirecionando...');
+
+    setTimeout(() => {
+        window.location.href = 'logado.html';
+    }, 900);
 });
