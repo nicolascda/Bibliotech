@@ -158,8 +158,69 @@
     padding: 1px 2.5px;
     border-radius: 50px;
     color: white;
+    transition: 500ms;
+    border: black solid 1px;
+    z-index: 2;
 
 }
+
+.star {
+    position: absolute;
+    bottom: 10px;
+    left: 160px;
+    background: gold;
+    padding: 1px 2.5px;
+    border-radius: 50px;
+    fill: white;
+    transition: 500ms;
+    border: black solid 1px;
+    z-index: 2;
+}
+
+.star:hover {
+    transform: translateY(-1px);
+    fill: snow;
+    cursor: pointer;
+    filter: brightness(110%);
+}
+
+.reservar {
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    transform: translate(40px, 22px);
+    opacity: 0.0;
+    transition: 500ms;
+}
+
+.reservar::after {
+    content: '';
+    width: 0px;
+    height: 25px;
+    transform:translate(-30px,-22px);
+    display: block;
+    background:darkcyan;
+    transition: 500ms;
+}
+
+.tag:hover + .reservar::after {
+    width: 150%;
+    border-radius: 15px;
+    z-index: -1;
+    position: relative;
+}
+
+.tag:hover + .reservar {
+    opacity: 1;
+    color: white;
+}
+
+.tag:hover {
+    background: darkcyan;
+    transform: rotate(180deg);
+    transition: 500ms;
+    cursor: pointer;
+} 
 
 .LogadoDiv {
     display: flex;
