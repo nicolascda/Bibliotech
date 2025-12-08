@@ -220,7 +220,20 @@
     transform: rotate(180deg);
     transition: 500ms;
     cursor: pointer;
-} 
+}
+
+/* .Indisponibilidade {
+    background-color: red;
+}  */
+
+.Indisponibilidade.tag:hover + .reservar::after {
+    background-color: red;
+}
+
+.ReservadoSucesso.tag:hover + .reservar::after {
+    background-color: goldenrod;
+}
+
 
 .LogadoDiv {
     display: flex;

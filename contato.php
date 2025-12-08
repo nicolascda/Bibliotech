@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -29,7 +31,7 @@
 
             <div class="LogadoDiv">
                 <span class="material-symbols-outlined UserIcon">supervised_user_circle</span>
-                <h2 class="User">Usuário</h2>
+                <!-- <h2 class="User"</h2> -->
             </div>
         </nav>
     </header>

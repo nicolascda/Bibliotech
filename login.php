@@ -8,7 +8,6 @@ $input = json_decode(file_get_contents("php://input"), true);
 $email = $input["email"] ?? "";
 $senha = $input["senha"] ?? "";
 
-// Conexão com MySQL
 $conn = new mysqli("localhost", "root", "", "bibliodb");
 
 if ($conn->connect_error) {
@@ -41,4 +40,18 @@ echo json_encode([
         "email" => $user["email"]
     ]
 ]);
+
+
+session_start();
+
+if (!isset($_SESSION['usuario_id'])) {
+    header("Location: contato.php");
+    exit;
+}
+
+$nome = $_SESSION['usuario_nome'];
+
+echo $nome;
+
+
 exit;
