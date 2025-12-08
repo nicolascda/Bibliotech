@@ -20,20 +20,22 @@
 
     <header class="header">
         <div class="logo">
-            <img class="LogoImg" src="/img/Logo.png">
-            <h2 onclick="window.location.href='index.php'" style="cursor:pointer;">Bibliotech</h2>
+            <img onclick="window.location.href='index.php'"  class="LogoImg" src="/img/Logo.png">
+            <h2 onclick="window.location.href='index.php'" id="logo" class="logoText" >Bibliotech</h2> 
         </div>
 
         <nav class="menu">
-            <a href="LivrosReservados.html" class="LinkLogado">Livros Reservados</a>
-            <a href="/logado.html" class="LinkLogado">Nosso acervo</a>
-            <a href="#" class="LinkLogado active">Contato</a>
-
-            <div class="LogadoDiv">
-                <span class="material-symbols-outlined UserIcon">supervised_user_circle</span>
-                <!-- <h2 class="User"</h2> -->
-            </div>
+            <a href="LivrosReservados.html" class="LinkLogado Menu">Livros Reservados</a>
+            <a href="logado.html" class="LinkLogado Menu active">Nosso acervo</a>
+            <a href="contato.php" class="LinkLogado">Contato</a>
+            
         </nav>
+
+        <div class="LogadoDiv">
+            <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
+            <h2 class="User"> Usuário</h2>
+        </div>
+
     </header>
 
     <!-- TÍTULO -->

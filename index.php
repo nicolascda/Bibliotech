@@ -14,16 +14,22 @@
     <body>
         <header>
 
-            <img class="HeaderImg" src="./img/Logo.png">
-            <h2 class="Logo">Bibliotech</h2>
+            <div class="LogoDiv">
+                <img class="HeaderImg" src="./img/Logo.png">
+                <h2 class="Logo">Bibliotech</h2>
+            </div>
             
-            <div class="HeaderTextDiv">
+            <!-- <div class="HeaderTextDiv">
                 <a href="#" class="HeaderText"> Quem somos</a>
                 <a href="logado.html" class="HeaderText"> Nosso Acervo</a>
                 <a class="HeaderText" href="login.html">Login</a>
+            </div> -->
 
-                <input type="text" class="HeaderInput" placeholder="Pesquisar"></input>
-            </div>
+            <a href="QuemSomos.html" class="HeaderText HeaderTextGrid1"> Quem somos</a>
+            <a href="logado.html" class="HeaderText HeaderTextGrid2"> Nosso Acervo</a>
+            <a class="HeaderText HeaderTextGrid3" href="login.html">Login</a>
+
+            <input type="text" class="HeaderInput HeaderSearchButton" placeholder="Pesquisar"></input>
 
             
         </header>

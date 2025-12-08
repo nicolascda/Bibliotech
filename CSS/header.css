@@ -1,10 +1,16 @@
 header {
-    background-color: #26333D;
+    /* background-color: #26333D; */
+    background-color: #2a3f4e;
     width: 100%;
-    height: 40px;
-    display: flex;
+    height: 50px;
+    display: grid;
     text-align: center;
     align-items: center;
+    grid-template-columns: repeat(20, 5%);
+}
+
+.LogoDiv {
+    display: flex;
 }
 
 .Title {
@@ -23,6 +29,22 @@ header {
     transition: 3s;
 }
 
+.HeaderTextGrid1
+{
+    display: grid;
+    grid-column-start: 12;
+    grid-column-end: 14;
+}
+.HeaderTextGrid2 {
+    display: grid;
+    grid-column-start: 14;
+    grid-column-end: 16;
+}
+
+.HeaderTextGrid3 {
+    display: grid;
+    grid-column-start: 16;
+}
 .HeaderText::after {
   content: '';
   width: 0px;
@@ -46,12 +68,21 @@ header {
     display: flex;
 }
 
-.HeaderTextDiv {
+/* .HeaderTextDiv {
     width: 37.8%;
     left: 50%;
     display: flex;
     position: relative;
     justify-content: space-around;
+    grid-column-start: 5;
+    grid-column-end: 15;
+} */
+
+.HeaderSearchButton {
+    width: 300%;
+    height: 50%;
+    grid-column-start: 18;
+    /* grid-column-end: 20; */
 }
 
 .HeaderInput {
