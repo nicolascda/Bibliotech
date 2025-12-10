@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -26,8 +24,8 @@
 
         <nav class="menu">
             <a href="LivrosReservados.html" class="LinkLogado Menu">Livros Reservados</a>
-            <a href="logado.html" class="LinkLogado Menu active">Nosso acervo</a>
-            <a href="contato.php" class="LinkLogado">Contato</a>
+            <a href="logado.html" class="LinkLogado Menu">Nosso acervo</a>
+            <a href="contato.php" class="LinkLogado active">Contato</a>
             
         </nav>
 

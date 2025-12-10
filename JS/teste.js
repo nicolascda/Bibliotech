@@ -1,4 +1,4 @@
-const LocalizacaoCorreta = 'http://localhost:3000/API/LIVRO';
+const LocalizacaoCorreta = 'http://localhost:3000/livros';
 const P = document.getElementById('resultado');
 
 
@@ -37,10 +37,10 @@ async function MostrarPromiseObject()
                 <a href="/Acervo/LivroDetalhes.html/${id}">
                     <img src="${img}" >
                 </a>
-                <svg data-disponivel="${reservado}"data-id="${id}" xmlns="http://www.w3.org/2000/svg"height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag ElementsTAG"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
+                <svg data-clickado="0" data-disponivel="${reservado}"data-id="${id}" xmlns="http://www.w3.org/2000/svg"height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3" class="tag ElementsTAG"><path d="M440-120v-320H120v-80h320v-320h80v320h320v80H520v320h-80Z"/>
                 </svg>
                 <p class="reservar">Reservar?</p>
-                <svg data-favotiro="S" class="star" fill="#000000" height="24px" width="24px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.486 473.486" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="473.486,182.079 310.615,157.952 235.904,11.23 162.628,158.675 0,184.389 117.584,299.641 91.786,462.257 237.732,386.042 384.416,460.829 357.032,298.473 "></polygon> </g></svg>
+                <svg data-favotiro="S" class="star" fill="#000000" height="24px" width="24px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.486 473.486" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <polygon points="473.486,182.079 310.615,157.952 235.904,11.23 162.628,158.675 0,184.389 117.584,299.641 91.786,462.257 237.732,386.042 384.416,460.829 357.032,298.473 "></polygon> </g></svg>
                 
             </div>
             

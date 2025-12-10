@@ -6,6 +6,10 @@ const bodyParser = require('body-parser');
 
 // Import route files
 const LivroRota = require('./livros');
+const ReservaRota = require('./reserva');
+
+
+// import LivroRota from "./livros.js"
 
 const texto = [
     {nome: "oi"}
@@ -20,6 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
 app.use('/API/LIVRO', LivroRota);
+app.use('/API/RESERVAR', ReservaRota);
 
 // Health check endpoint
 app.get('/', (req, res) => {
@@ -64,6 +69,7 @@ app.listen(PORT, () => {
     console.log(`🚀 Server is running on http://localhost:${PORT}`);
     console.log(`📊 API Documentation available at http://localhost:${PORT}`);
     console.log(`👥 Clients API: http://localhost:${PORT}/API/LIVRO`);
+    console.log(` Rota reservar: http://localhost:${PORT}/API/RESERVAR`);
     console.log(`http://localhost:${PORT}/teste/`);
     
 });

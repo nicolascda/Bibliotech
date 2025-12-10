@@ -30,13 +30,13 @@ async function CriarLivro()
     const id = resultado[LivroID].id;
     const img = resultado[LivroID].img;
     const genero = resultado[LivroID].Genero;
-    const descricao = resultado[LivroID].descricao;
+    const descricao = resultado[LivroID].resumo;
     console.log(resultado[LivroID]);
     console.log(resultado[LivroID].img);
         
         Section.innerHTML += `
             <div class="book-cover">
-                <img src="${img}" alt="${nome}">
+                <img src="/${img}" alt="${nome}">
             </div>
 
             <div class="book-info">

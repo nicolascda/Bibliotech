@@ -52,6 +52,7 @@ form.addEventListener('submit', async (e) => {
     sessionStorage.setItem('biblio_user', JSON.stringify({
         email: data.user.email,
         id: data.user.id,
+        nome: data.user.nome,
         loggedAt: Date.now()
     }));
 

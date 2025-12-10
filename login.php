@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     exit;
 }
 
-$stmt = $conn->prepare("SELECT id, email, senha FROM usuario WHERE email = ?");
+$stmt = $conn->prepare("SELECT id, nome, email, senha FROM usuario WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -37,21 +37,13 @@ echo json_encode([
     "msg" => "Logado!",
     "user" => [
         "id" => $user["id"],
+        "nome" => $user["nome"],
         "email" => $user["email"]
     ]
 ]);
 
 
-session_start();
 
-if (!isset($_SESSION['usuario_id'])) {
-    header("Location: contato.php");
-    exit;
-}
-
-$nome = $_SESSION['usuario_nome'];
-
-echo $nome;
 
 
 exit;
