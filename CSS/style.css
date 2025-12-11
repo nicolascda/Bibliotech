@@ -16,7 +16,14 @@ a, h1, h2 {
     margin: 0;
 }
 
+.ImgDivChange {
 
+    background-image: url("/img/Pessoa1.png");
+    width: 30vw;
+    height: 56vh;
+    background-size:contain;
+    background-repeat: no-repeat;
+}
 
 .Logo{
     font-size: 24px;

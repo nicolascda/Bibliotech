@@ -138,3 +138,63 @@ table td {
     margin-left: auto;
     margin-right: auto;
 }
+/* ===== SIDEBAR CENTRALIZADA ===== */
+.sidebar {
+    background-color: #0C233A;
+    color: white;
+    padding: 20px;
+
+    align-items: center;     /* CENTRALIZA HORIZONTALMENTE */
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* ===== ÁREA DE CONTEÚDO CENTRALIZADA ===== */
+.content {
+    margin-left: 260px;
+    padding: 20px 40px;
+    width: calc(100% - 260px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centraliza horizontalmente */
+    text-align: center;  /* centraliza textos */
+}
+
+/* ===== CARDS CENTRALIZADOS ===== */
+.cards {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ===== TABELA CENTRALIZADA ===== */
+.tabelaArea {
+    width: 100%;
+    max-width: 900px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    max-width: 900px;
+}
+
+table th, table td {
+    text-align: center; /* Centraliza o conteúdo das células */
+}

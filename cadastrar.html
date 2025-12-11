@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="./img/Logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliotech - Administração</title>
+    <link rel="stylesheet" href="./css/admin2.css">
+    <link rel="stylesheet" href="./CSS/cadastrar.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <img src="./IMG/logo.png" alt="Bibliotech Logo" class="logo">
+
+        <a href="admin.html">Dashboard</a>
+        <a class="active" href="#">Cadastrar</a>
+
+        <a class="logout" href="./index.html">Sair</a>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1 class="tituloc">Cadastrar</h1>
+        </header>
+
+        <section class="tabelaArea">
+            <section class="container-form">
+
+                <form id="formLivro" enctype="multipart/form-data">
+
+                    <label for="nome">Nome do livro</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="autor" required>
+
+                    <label for="resumo">Resumo</label>
+                    <textarea id="resumo" name="resumo" required></textarea>
+
+                    <label for="genero">Gênero</label>
+                    <select id="genero" name="genero" required>
+                        <option value="Romance">Romance</option>
+                        <option value="Fantasia">Fantasia</option>
+                        <option value="Ficção">Ficção</option>
+                        <option value="Mistério">Mistério</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comédia">Comédia</option>
+                        <option value="Educaçao">Educaçao</option>
+                    </select>
+
+                    <label for="imagem">Imagem do Livro</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
+
+                    <input type="submit" class="botao-cadastrar" value="Cadastrar Livro">
+
+                </form>
+
+                <p id="msg"></p>
+
+            </section>
+        </section>
+
+    </div>
+
+    <script src="./JS/cadastrarLivro.js"></script>
+</body>
+
+</html>
+        

@@ -7,10 +7,13 @@ var app = express();
 router.get('/', async (req, res) => {
 
     try {
-        const clients = await pool.query('SELECT * FROM reservado');
-        
-        // console.log("Hello World");
-        // res.json('Sucesso');
+        const clients = await pool.query(`SELECT reservado.usuario_id, reservado.livro_id, usuario.nome AS usuario_nome, livro.nome  AS livro_nome, livro.img,
+        livro.autor, livro.resumo, livro.Genero, livro.reservado
+        FROM reservado  
+        INNER JOIN usuario ON reservado.usuario_id = usuario.id
+        INNER JOIN livros AS livro ON reservado.livro_id = livro.id
+        WHERE reservado.usuario_id = 1 OR 2;`);
+
         res.json(clients);
 
         
@@ -19,27 +22,30 @@ router.get('/', async (req, res) => {
     }
 });
 
-
 // GET single client
 router.get('/:id', async (req, res) => {
     try {
-        const  { User_id } = req.body;
-        console.log( User_id);
-        // const client = await pool.query('SELECT * FROM teste WHERE client_id = ?', [req.params.id]);
-        const result = await pool.query('SELECT * FROM reservado WHERE usuario_id = ?', ["1"]);
+        const UserID = req.params.id;
+        
+        const result = await pool.query(`SELECT reservado.usuario_id, reservado.livro_id, usuario.nome AS usuario_nome, livro.nome  AS livro_nome, livro.img,
+        livro.autor, livro.resumo, livro.Genero, livro.reservado
+        FROM reservado  
+        INNER JOIN usuario ON reservado.usuario_id = usuario.id
+        INNER JOIN livros AS livro ON reservado.livro_id = livro.id
+        WHERE reservado.usuario_id = ?;`, [UserID]);
+
         if (result.length === 0) {
             return res.status(404).json({ error: 'Client not found' });
         }
-        res.json(result[0]);
+        res.json(result);
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
 });
 
 // POST create client
-router.post('/:id', async (req, res) => {
+router.post('/', async (req, res) => {
     const { User_id, Livro_id } = req.body;
-    // const { User_id, Livro_id } = req.body.params;
     
     if (!User_id || !Livro_id) {
         return res.status(400).json({ error: 'Está faltando algum id' });
@@ -47,7 +53,7 @@ router.post('/:id', async (req, res) => {
 
     try {
         const result = await pool.query
-            ('INSERT INTO reservado (usuario_id, livro_id) VALUES (?, ?)',
+            (`INSERT INTO reservado (usuario_id, livro_id) VALUES (?, ?);`,
             [User_id, Livro_id]
         );
         res.status(201).json({
@@ -63,36 +69,18 @@ router.post('/:id', async (req, res) => {
     
 });
 
-// PUT update client
-router.put('/:id', async (req, res) => {
-    const { name } = req.body;
-    
-    try {
-        const result = await pool.query(
-            'UPDATE teste.nomes SET name = ? WHERE id = ?',
-            [name, req.params.id]
-        );
-        
-        if (result.affectedRows === 0) {
-            return res.status(404).json({ error: 'Client not found' });
-        }
-        
-        res.json({ message: 'Client updated successfully' });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
-
 // DELETE client
-router.delete('/:id', async (req, res) => {
+router.delete('/', async (req, res) => {
+    const { User_id, Livro_id } = req.body;
+
     try {
-        const result = await pool.query('DELETE FROM clients WHERE client_id = ?', [req.params.id]);
+        const result = await pool.query(`DELETE FROM reservado WHERE livro_id = ? AND usuario_id = ?;`, [Livro_id, User_id]);
         
         if (result.affectedRows === 0) {
-            return res.status(404).json({ error: 'Client not found' });
+            return res.status(404).json({ error: 'Livro reservado não encontrado' });
         }
         
-        res.json({ message: 'Client deleted successfully' });
+        res.json({ message: 'Livro reservado deletado com sucesso' });
     } catch (error) {
         res.status(500).json({ error: error.message });
     }

@@ -24,14 +24,14 @@
 
         <nav class="menu">
             <a href="LivrosReservados.html" class="LinkLogado Menu">Livros Reservados</a>
-            <a href="logado.html" class="LinkLogado Menu">Nosso acervo</a>
+            <a href="logado.html" class="LinkLogado Menu ">Nosso acervo</a>
             <a href="contato.php" class="LinkLogado active">Contato</a>
             
         </nav>
 
         <div class="LogadoDiv">
             <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
-            <h2 class="User"> Usuário</h2>
+            <h2 class="User"  id="UsuariosInformacao"> Usuário</h2>
         </div>
 
     </header>
@@ -154,15 +154,14 @@
             <input type="file" id="inputFoto" accept="image/*" style="display:none;">
         </div>
 
-        <h2 id="perfilNome" class="perfil-nome" contenteditable="true">Clique para editar nome</h2>
         <p id="perfilEmail" class="perfil-email">email@exemplo.com</p>
 
-        <button id="btnSalvarNome" class="perfil-btn save">Salvar nome</button>
         <button id="btnSair" class="perfil-btn logout">Sair</button>
 
     </div>
 </div>
 
     <script src="js/contato.js"></script>
+    <script src="./JS/LogadoInformacoes.js"></script>
 </body>
 </html>

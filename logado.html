@@ -7,6 +7,7 @@
     <title>Nosso Acervo</title>
     <link rel="stylesheet" href="./CSS/logado.css">
     <link rel="stylesheet" href="./CSS/footer.css">
+    <!-- <link rel="stylesheet" href="./CSS/contato.css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=supervised_user_circle" />
 </head>
@@ -25,9 +26,14 @@
             
         </nav>
 
-        <div class="LogadoDiv">
+        <!-- <div class="LogadoDiv">
             <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
             <h2 class="User" id="UsuariosInformacao"> Usuário</h2>
+        </div> -->
+        <div class="LogadoDiv">
+            <!-- <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span> -->
+            <h2 class="User"  id="UsuariosInformacao"> Usuário</h2>
+            <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
         </div>
 
     </header>
@@ -121,8 +127,26 @@
 
         </footer>
 
+        <div id="perfilModal" class="perfil-modal hidden">
+            <div class="perfil-content">
+
+                <span id="fecharPerfil" class="close">&times;</span>
+
+                <div class="foto-container">
+                    <img id="fotoPerfil" class="foto-perfil" src="./img/user-default.png">
+                    <input type="file" id="inputFoto" accept="image/*" style="display:none;">
+                </div>
+
+                <p id="perfilEmail" class="perfil-email">email@exemplo.com</p>
+
+                <button id="btnSair" class="perfil-btn logout">Sair</button>
+
+            </div>
+        </div>
+
     <script src="./JS/ReservarLivros.js"></script>
     <script src="./JS/teste.js"></script>
+    <script src="js/contato.js"></script>
     <script src="./JS/LogadoInformacoes.js"></script>
 </body>
 </html>

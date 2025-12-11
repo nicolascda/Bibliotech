@@ -135,3 +135,12 @@
 }
 
 
+.LinkBotao {
+    color: white;
+    text-decoration: none;
+}
+
+.LinkBotao:active {
+    color: white;
+    text-decoration: none;
+}

@@ -1,48 +1,53 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pt-BR">
+
 <head>
     <link rel="icon" href="./img/Logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Livros Reservados</title>
-    <link rel="stylesheet" href="../CSS/logado.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/logado.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
+    <link rel="stylesheet" href="./CSS/carousel.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=supervised_user_circle" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0&icon_names=supervised_user_circle" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
 </head>
+
 <body>
 
     <header class="header">
         <div class="logo">
-            <img onclick="window.location.href='index.php'"  class="LogoImg" src="/img/Logo.png">
-            <h2 onclick="window.location.href='index.php'" id="logo" class="logoText" >Bibliotech</h2> 
+            <img onclick="window.location.href='index.php'" class="LogoImg" src="/img/Logo.png">
+            <h2 onclick="window.location.href='index.php'" id="logo" class="logoText">Bibliotech</h2>
         </div>
 
         <nav class="menu">
-            <a href="LivrosReservados.html" class="LinkLogado Menu active">Livros Reservados</a>
+            <a href="LivrosReservados.html" class="LinkLogado Menu active" id="LinkUsuario">Livros Reservados</a>
             <a href="../logado.html" class="LinkLogado Menu">Nosso acervo</a>
             <a href="../contato.php" class="LinkLogado">Contato</a>
-            
+
         </nav>
 
         <div class="LogadoDiv">
             <span class="material-symbols-outlined UserIcon"> supervised_user_circle</span>
-            <h2 class="User"> Usuário</h2>
+            <h2 class="User" id="UsuariosInformacao"> Usuário</h2>
         </div>
 
     </header>
 
     <section class="banner">
         <h1>Livros Reservados.</h1>
-        <p>Títulos relevantes e autores renomados. Inserção de novas obras todo mês.</p>
+        <!-- <p>Títulos relevantes e autores renomados. Inserção de novas obras todo mês.</p> -->
 
-        <div class="search-box">
+        <!-- <div class="search-box">
             <input type="text" placeholder="Digite o nome do livro ou do autor que deseja buscar">
             <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg></button>
-        </div>
+        </div> -->
     </section>
 
-    <section class="filtros">
+    <!-- <section class="filtros">
         <select>
             <option>Gênero</option>
             <option>Romance</option>
@@ -60,44 +65,113 @@
                 <option>A-Z</option>
             </select>
         </div>
-    </section>
+    </section> -->
 
     <!-- GRID DE LIVROS -->
-    <section class="Livrosreser">
+    <section class="Livrosreser" id="SectionNenhumLivroReservado">
         <svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="70px" fill="gray"><path d="M480-160q-48-38-104-59t-116-21q-42 0-82.5 11T100-198q-21 11-40.5-1T40-234v-482q0-11 5.5-21T62-752q6-3 11.5-6t11.5-5l-59-59 56-56L878-82l-56 56-204-204q-38 10-72.5 27.5T480-160Zm-80-135v-153L146-702q-7 2-13 4.5t-13 5.5v397q35-13 69.5-19t70.5-6q36 0 70.5 6t69.5 19Zm80-299L274-800q54 2 106 16.5T480-740v146Zm0 338q18-11 36.5-20t38.5-17l-75-75v112Zm161-177-81-81v-226l200-200v400L641-433Zm240 240L758-316q21 3 41.5 8t40.5 12v-480q15 5 29.5 11t28.5 13q11 5 16.5 15t5.5 21v482q0 17-11.5 28.5T881-193ZM400-295v-153 153Z"/></svg>
-        <h1>Voce não possui livros reservados.</h1>
-        
-        
+        <h1>Voce não possui nenhum livro reservado.</h1>
+
+
     </section>
 
-        <footer class="Footer ContatoFooter">
-            <div class="FooterDivTitle">
-                <img class="FooterImg" src="../img/Logo.png">
-                <h2 class="FooterTitle">Bibliotech</h2>
+    <!-- <button class="button button--prepend">Prepend</button> -->
+
+    <section id="SectionLivroReservado">
+
+        
+
+
+        <!-- <h2 class="CarouselTitle carousel-Reservado">Livros Reservados:</h2> -->
+
+        <div class="carousel"  data-flickity='{ "adaptiveHeight": true}'>
+            
+             <!-- <div class="carousel-cell carousel-Reservado">
+                <div class="CarouselDiv">
+                    <img class="CarouselImg carousel-Reservado" src="/img/FnafIntoThePit.jpg">
+                </div>
+                
             </div>
+           <div class="carousel-cell carousel-Reservado">
+                <div class="CarouselDiv">
+                    <img class="CarouselImg carousel-Reservado" src="/img/GuerraDosTronos.jpg">
 
-            <img class="SenaiFooter" src="../img/SENAI.png">
-
-            <hgroup class="HgroupBiblioteca">
-                <h2 class="HgroupTitle FooterContatoText"> Biblioteca</h2>
-                <h3 class="HgroupText"> Baixar Aplicativo</h3>
-                <h3 class="HgroupText"> Suporte ao usuário</h3>
-            </hgroup>
-
-            <hgroup class="HgroupQuemSomos">
-                <h2 class="HgroupTitle FooterContatoText"> Quem somos</h2>
-                <h3 class="HgroupText"> Clientes</h3>
-                <h3 class="HgroupText"> Benefícios</h3>
-            </hgroup>
-
-            <div class="DivAcesseNossasRedes">
-                <h2 class="HgroupTitle FooterContatoText">Acesse nossas redes</h2>
-                <img class="FooterIcon" src="../img/Facebook.png">
-                <img class="FooterIcon" src="../img/Linkedin.png">
-                <img class="FooterIcon" src="../img/Instagram.png">
+                </div>
             </div>
+              <div class="carousel-cell carousel-Reservado">
+                <div class="CarouselDiv">
+                    <img class="CarouselImg carousel-Reservado" src="/img/SenhorDosAneis.jpg">
+                </div>
+            </div> -->
+           <!-- <div class="carousel-cell carousel-Reservado">
+                <div class="CarouselDiv">
+                    <img class="CarouselImg carousel-Reservado" src="/img/OAlquimista.jpg">
 
-        </footer>
+                </div>
+            </div>
+            <div class="carousel-cell carousel-Reservado">
+                <div class="CarouselDiv ">
+                    <img class="CarouselImg carousel-Reservado" src="/img/OGuiaDoMochileiroDasGalaxias.jpg">
+                </div>
+            </div> -->
 
+        </div>
+
+        <br>
+        <br>
+
+    </section>
+
+    <footer class="Footer ContatoFooter">
+        <div class="FooterDivTitle">
+            <img class="FooterImg" src="../img/Logo.png">
+            <h2 class="FooterTitle">Bibliotech</h2>
+        </div>
+
+        <img class="SenaiFooter" src="../img/SENAI.png">
+
+        <hgroup class="HgroupBiblioteca">
+            <h2 class="HgroupTitle FooterContatoText"> Biblioteca</h2>
+            <h3 class="HgroupText"> Baixar Aplicativo</h3>
+            <h3 class="HgroupText"> Suporte ao usuário</h3>
+        </hgroup>
+
+        <hgroup class="HgroupQuemSomos">
+            <h2 class="HgroupTitle FooterContatoText"> Quem somos</h2>
+            <h3 class="HgroupText"> Clientes</h3>
+            <h3 class="HgroupText"> Benefícios</h3>
+        </hgroup>
+
+        <div class="DivAcesseNossasRedes">
+            <h2 class="HgroupTitle FooterContatoText">Acesse nossas redes</h2>
+            <img class="FooterIcon" src="../img/Facebook.png">
+            <img class="FooterIcon" src="../img/Linkedin.png">
+            <img class="FooterIcon" src="../img/Instagram.png">
+        </div>
+
+    </footer>
+
+    <div id="perfilModal" class="perfil-modal hidden">
+            <div class="perfil-content">
+
+                <span id="fecharPerfil" class="close">&times;</span>
+
+                <div class="foto-container">
+                    <img id="fotoPerfil" class="foto-perfil" src="./img/user-default.png">
+                    <input type="file" id="inputFoto" accept="image/*" style="display:none;">
+                </div>
+
+                <p id="perfilEmail" class="perfil-email">email@exemplo.com</p>
+
+                <button id="btnSair" class="perfil-btn logout">Sair</button>
+
+            </div>
+        </div>
+
+    <script src="./JS/LogadoInformacoes.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="./JS/MostrarLivrosReservados.js"></script>
+    <script src="js/contato.js"></script>
 </body>
+
 </html>

@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const perfilNome = document.getElementById("perfilNome");
     const perfilEmail = document.getElementById("perfilEmail");
 
-    const btnSalvarNome = document.getElementById("btnSalvarNome");
+    // const btnSalvarNome = document.getElementById("btnSalvarNome");
     const btnSair = document.getElementById("btnSair");
 
 
@@ -77,16 +77,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // -------------------------------
     // Salvar nome
     // -------------------------------
-    btnSalvarNome.addEventListener("click", () => {
-        const nome = perfilNome.textContent.trim();
-        if (nome.length < 2) {
-            alert("Digite um nome válido.");
-            return;
-        }
+    // btnSalvarNome.addEventListener("click", () => {
+    //     const nome = perfilNome.textContent.trim();
+    //     if (nome.length < 2) {
+    //         alert("Digite um nome válido.");
+    //         return;
+    //     }
 
-        localStorage.setItem("perfil_nome", nome);
-        alert("Nome salvo!");
-    });
+    //     localStorage.setItem("perfil_nome", nome);
+    //     alert("Nome salvo!");
+    // });
 
 
     // -------------------------------

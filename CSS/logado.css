@@ -18,7 +18,7 @@
     background: #2a3f4e;
     box-shadow: 0 2px 5px #00000020;
     display: grid;
-    grid-template-columns: repeat(20, 5%);
+    grid-template-columns: repeat(40, 2.5%);
     grid-template-rows: repeat(3, 33%);
 }
 
@@ -248,8 +248,8 @@
     width: 200%;
     height: 200%;
     grid-row-start: 2;
-    grid-column-start: 18;
-    grid-column-end: 19;
+    grid-column-start: 36;
+    grid-column-end: 38;
 }
 
 .LogadoDiv:hover {
@@ -266,7 +266,7 @@
     display: flex;
     align-items: center;
     grid-row: 2/3;
-    grid-column: 8/20;
+    grid-column: 13/30;
 }
 
 .User {
@@ -335,5 +335,118 @@
     font-family: "montserrat";
     text-decoration: underline;
     height: 300px;
+    /* width: 20px; */
     justify-content: center;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+
+.perfil-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+/* Conteúdo do modal */
+.perfil-content {
+    background: #ffffff;
+    width: 320px;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+    text-align: center;
+    animation: perfilShow 0.25s ease-out;
+    position: relative;
+}
+
+@keyframes perfilShow {
+    from {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.foto-container {
+    width: 130px;
+    height: 130px;
+    margin: auto;
+}
+
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 100%;
+    border: 4px solid #596CFF;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.foto-perfil:hover {
+    scale: 1.05;
+}
+
+.perfil-nome {
+    font-size: 20px;
+    margin-top: 12px;
+    font-weight: bold;
+    outline: none;
+}
+
+.perfil-email {
+    margin: 8px 0 18px;
+    color: #444;
+}
+
+/* Botões */
+.perfil-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.perfil-btn.save {
+    background: #4A67DF;
+    color: white;
+}
+
+.perfil-btn.save:hover {
+    background: #3b54bd;
+}
+
+.perfil-btn.logout {
+    background: #ff4d4d;
+    color: white;
+}
+
+.perfil-btn.logout:hover {
+    background: #d63838;
+}
+
+.hidden {
+    display: none !important;
 }

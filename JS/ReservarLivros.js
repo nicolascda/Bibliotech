@@ -42,6 +42,8 @@ async function VerificarTag()
                     console.log(`O livro de id: ${LivroDataID} foi adicionado no usuário de ID: ${userID}`);
                     MudarParaAtivado(i);
                     Clickado = BotaoTag[i].setAttribute(`data-clickado`, '1');
+                    EnviarReserva(userID, LivroDataID)
+                    // console.log(LivroDataID)
                     
                 }
                 else if ( Clickado == "1")
@@ -49,6 +51,7 @@ async function VerificarTag()
                     console.log(`O livro de id: ${LivroDataID} foi removido do usuário de ID: ${userID}`);
                     MudarParaNaoAtivado(i);
                     Clickado = BotaoTag[i].setAttribute(`data-clickado`, "0");
+                    DeletarReserva(userID, LivroDataID)
                 }
             
             
@@ -96,30 +99,63 @@ setTimeout(VerificarTag, 100);
 // fundo.style.background = "blue";
 
 
-async function EnviarLivro(UserID, LivroID)
+async function EnviarReserva(UserID, LivroID)
 {
-    fetch('https://api.example.com/users/:id', options)
-        // .then(response => {
-        //     if (!response.ok) {
-        //         throw new Error(`HTTP error! status: ${response.status}`);
-        //     }
-        //     return response.json();
-        // })
-        // .then(data => {
-        //     console.log('Created user:', data);
-        // })
-        // .catch(error => {
-        //     console.error('Error creating user:', error);
-        // });
-        // const 
-
-        const response = await fetch("http://localhost:3000/API/ENVIAR", {
+    // const UserID = 1;
+    // const LivroID = 3;
+    
+    try { 
+        const response = await fetch("http://localhost:3000/API/RESERVAR", {
             method: "POST",
+            headers: {
+            // Essential header for sending JSON data
+            'Content-Type': 'application/json'
+            },
             body: JSON.stringify
             ({ 
                 User_id: `${UserID}`,
                 Livro_id: `${LivroID}`
             }),
+            
         });
 
+    const data = await response.json();
+    console.log('Success:', data);
+    return data;
+
+    } catch(error) {
+        console.log(`Algo está faltando, ${error}`)
+
+        throw error
+    }
+
+}
+
+async function DeletarReserva(UserID, LivroID) {
+//   const UserID = 1;
+//   const LivroID = 3;
+
+  const url = new URL('http://localhost:3000/API/RESERVAR');
+
+  try {
+    const response = await fetch(url, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify ({
+        User_id: `${UserID}`,
+        Livro_id: `${LivroID}`
+      })
+
+    });
+
+    if (response.ok) {
+      console.log('Reserva deletada com sucesso!');
+    } else {
+      console.error('Falha ao deletar reserva:', response.statusText);
+    }
+  } catch (error) {
+    console.error('Erro na requisição:', error);
+  }
 }

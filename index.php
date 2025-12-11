@@ -37,14 +37,17 @@
         <main>
             <section class="MainSection">
                 <img class="MainImg" src="./img/Mulher.png">
-
-                <div class="MainGroupFirst">
-                    <h2 class="MainTitleText">Bem vindo a Bibliotech!</h2>
-                    <h3 class="MainText">O melhor site onde voce pode alugar seus livros na biblioteca</h3>
+                <!-- <div class="MainImg ImgDivChange" id="view"> -->
 
                 </div>
 
-                <button type="button" class="MainButton"> Acessar</button>
+                <div class="MainGroupFirst">
+                    <h2 class="MainTitleText">Bem vindo a Bibliotech!</h2>
+                    <h3 class="MainText">O Bibliotech é um site especializado na experiência do usuário, uma biblioteca virtual, que facilita o acesso a reserva de livros mesmo a uma longa distância, se junte a nossa jornada</h3>
+
+                </div>
+
+                <button type="button" class="MainButton"><a class="LinkBotao"href="./logado.html"> Acessar</a></button>
                 
             </section>
 
@@ -80,7 +83,7 @@
                     <h2 class="MainThirdTitleText">Acesse a nossa plataforma</h2>
                     <h3 class="MainText">Faça login ou solicite cadastro para a bibliotecário</h3>
 
-                    <button type="button" class="ThirdMainButton"> Acessar</button>
+                    <button type="button" class="ThirdMainButton"><a class="LinkBotao"href="./login.html"> Acessar</a></button>
 
                 </div>
                 

@@ -1,4 +1,4 @@
-const LocalizacaoCorreta = 'http://localhost:3000/livros';
+const LocalizacaoCorreta = 'http://localhost:3000/API/LIVRO';
 const P = document.getElementById('resultado');
 
 
