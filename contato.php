@@ -161,7 +161,7 @@
     </div>
 </div>
 
-    <script src="js/contato.js"></script>
-    <script src="./JS/LogadoInformacoes.js"></script>
+    <script src="./JS/FrontEnd/contato.js"></script>
+    <script src="./JS/FrontEnd/LogadoInformacoes.js"></script>
 </body>
 </html>

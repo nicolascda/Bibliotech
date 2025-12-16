@@ -71,4 +71,17 @@
     font-family: var(--font);
 }
 
+.LivrosComMesmoGenero {
+    margin-top: -150px;
+    margin-bottom: 50px;
+}
 
+.CarouselMesmoLivrosTitle {
+    font-size: 28px;
+    /* justify-content: center; */
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    text-decoration-thickness: 3px;
+}

@@ -1,0 +1,103 @@
+.EstrelasNota {
+    margin-top: -20px;
+    width: 55px;
+    height: auto;
+    fill: aliceblue;
+    /* fill-rule: nonzero; */
+}
+
+.SectionComentar {
+    margin-left: 10px;
+}
+.ComentarioTitle {
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+.ComentarioArea {
+    width: 50%;
+    max-width: 80%;
+    min-width: 50%;
+    height: 10vh;
+    max-height: 15vh;
+    min-height: 5vh;
+}
+
+
+.BarraComentar {
+    display: block;
+}
+
+.BotaoEnviarTexto {
+    width: 120px;
+    height: 28px;
+    border-radius: 15px;
+    border-color: #0095ff;
+    background-color: #0095ff;
+    font-size: 20px;
+    color: white;
+    transition: 500ms;
+    position:absolute;
+}
+
+.BotaoEnviarTexto:hover {
+    filter: brightness(110%);
+    width: 130px;
+    height: 32px;
+}
+
+.BotaoEnviarTexto:active {
+    filter: brightness(95%);
+    transition: 0s;
+    transform: translateY(3px);
+}
+
+.Nota {
+    display: flex;
+    align-items: center;
+}
+ 
+.Nota > .EstrelasNota {
+    width: auto;
+    height: 30px;
+    margin: 0;
+    fill: white;
+}
+
+.Nota > .EstrelasNota:hover {
+    width: auto;
+    height: 31px;
+    cursor: pointer;
+    
+}
+
+.ComentarioPerfil {
+    display: block;
+}
+
+.ComentarioLinha {
+    height: 3px;
+    width: 100.8%;
+    background-color:#26333D;
+    margin-left: -10px;
+}
+
+.PerfilUsuario {
+    width: 84px;
+    height: auto;
+}
+
+.ComentarioPerfilImg {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.TextoComentario {
+    margin-left: 80px;
+    max-width: 50vw;
+}
+.TextoNota {
+    margin-top: -30px;
+    margin-left: 82px;
+    margin-bottom: 10px;
+}
